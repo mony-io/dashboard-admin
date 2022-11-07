@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Kantumruy:wght@300;400;700&family=Noto+Sans+Khmer:wght@200;300;400;700&display=swap');
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;;
+    font-family: 'Kantumruy', sans-serif;
     margin: 0;
-    background-color: #EEEDE7;
+    background-color: #B7C4CF;
 }
 
 @layer utilities {

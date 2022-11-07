@@ -56,13 +56,13 @@ function Sidebar() {
 
   return (
         <div
-        className={`flex-2 bg-primary-bg-dark h-screen pt-8 ${
+        className={`flex-2 bg-primary-bg-dark md:h-auto h-screen lg:h-auto pt-8 ${
           open ? "w-48" : "w-12" 
         } ${
             open ? "md:w-56" : "md:w-16" 
           } duration-300 overflow-auto scroll-smooth relative scrollbar`}
       >
-        <ul className="pt-2 text-gray-300">
+        <ul className="pt-2 text-gray-300 mt-6">
           {Menus.map((menu, index) => (
             <>
               <li
