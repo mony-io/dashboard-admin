@@ -46,7 +46,7 @@ function Dashboard() {
           </div>
         </div>
         <div className="col-span-full lg:mb-2 bg-secondary-bg-light shadow-sm">
-          <div class="grid grid-rows-1 grid-flow-col gap-0 gap-x-0 border border-gray-300 rounded-sm overflow-hidden">
+          <div className="grid grid-rows-1 grid-flow-col gap-0 gap-x-0 border border-gray-300 rounded-sm overflow-hidden">
             <div className="rounded-lg shadow overflow-auto scroll-smooth scrollbar md:block">
               <table className="w-full table-auto">
                 <thead className="bg-gray-50 border-gray-200">
@@ -82,8 +82,8 @@ function Dashboard() {
           Items-Listing
         </div>
         <div className="col-span-full h-48 rounded-sm">
-          <div class="grid grid-flow-row-dense grid-cols-4 md:grid-cols-3 grid-rows-2 gap-2">
-            <div class="col-span-2 md:col-span-1">
+          <div className="grid grid-flow-row-dense grid-cols-4 md:grid-cols-3 grid-rows-2 gap-2">
+            <div className="col-span-2 md:col-span-1">
               <div className="flex h-12 md:h-16 items-center justify-between bg-secondary-bg-light shadow-sm overflow-hidden rounded-sm">
                 <div className="bg-blue-400 h-12 w-12 md:h-16 md:w-16 flex items-center justify-center">
                   <AiFillPlusSquare color="white" className="text-3xl" />
@@ -91,7 +91,7 @@ function Dashboard() {
                 <span className="text-sm mr-2 text-gray-500">Start new</span>
               </div>
             </div>
-            <div class="col-span-2 md:col-span-1">
+            <div className="col-span-2 md:col-span-1">
               <div className="flex h-12 md:h-16 items-center justify-between bg-secondary-bg-light shadow-sm overflow-hidden rounded-sm">
                 <div className="bg-red-400 h-12 w-12 md:h-16 md:w-16  flex items-center justify-center">
                   <AiFillPlusSquare color="white" className="text-3xl" />
@@ -99,7 +99,7 @@ function Dashboard() {
                 <span className="text-sm mr-2 text-gray-500">Add Product</span>
               </div>
             </div>
-            <div class="col-span-2 md:col-span-1">
+            <div className="col-span-2 md:col-span-1">
               <div className="flex h-12 md:h-16 items-center justify-between bg-secondary-bg-light shadow-sm overflow-hidden rounded-sm">
                 <div className="bg-green-400 h-12 md:h-16 md:w-16 w-12 flex items-center justify-center">
                   <AiFillPlusSquare color="white" className="text-3xl" />
