@@ -8,10 +8,9 @@ import {
   MdOutlineBorderColor,
   MdProductionQuantityLimits,
   MdMedicalServices,
-  MdAcUnit,
 } from "react-icons/md";
 import { RiHome3Fill, RiUserVoiceFill } from "react-icons/ri";
-import { FaUserTie } from "react-icons/fa";
+import { FaUserTie, FaSellcast } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
@@ -21,15 +20,11 @@ function Sidebar() {
   const [submenuOpenThr, setsubmenuOpenThr] = useState(false);
 
   const Menus = [
-    { title: "Dashboard", icon: <RiHome3Fill color="white" /> },
+    { titleDas: "Dashboard", icon: <RiHome3Fill color="white" /> },
+    { titleSal: "Sale", icon2: <FaSellcast color="white" /> },
     {
       title2: "Category",
-      icon2: <BiCategoryAlt color="white" />,
-      subMenu2: true,
-      subMenuItemsTwo: [
-        { title1: "Add categories", icon: <GoPrimitiveDot color="white" /> },
-        { title2: "List category", icon: <GoPrimitiveDot color="white" /> },
-      ],
+      icon3: <BiCategoryAlt color="white" />,
     },
     { title: "Payments", icon: <MdPayment color="white" /> },
     { title: "Role", icon: <AiFillControl color="white" /> },
@@ -61,47 +56,41 @@ function Sidebar() {
 
   return (
     <div
-      className={`flex-2 bg-primary-bg-dark md:h-auto lg:h-screen h-auto pt-8 ${
+      className={`flex-2 bg-primary-bg-dark h-auto pt-8 ${
         open ? "w-48" : "w-12"
       } ${
         open ? "md:w-56" : "md:w-16"
-      } duration-300 overflow-auto scroll-smooth relative scrollbar`}
+      } duration-300 overflow-auto scroll-smooth relative top-0 scrollbar`}
     >
       <ul className="pt-2 text-gray-300 mt-6">
         {Menus.map((menu, index) => (
           <>
             <li
               key={index}
-              className={`text-primary-text-dark text-xl flex items-center gap-x-4 cursor-pointer md:pl-5 sm:pl-3 pl-3 p-3 hover:bg-primary-bg-light focus:outline ${
+              className={`text-primary-text-dark text-xl flex items-center gap-x-4 cursor-pointer pl-[18px] p-3 hover:bg-primary-bg-light focus:outline ${
                 menu.spacing ? "mt-6" : "mt-2"
               }`}
             >
               <span className="text-xl block float-left">
                 <Link to="/">{menu.icon}</Link>
-                {menu.icon2}
+                <Link to="/sale">{menu.icon2}</Link>
+                <Link to="/addcategory">{menu.icon3}</Link>
               </span>
               <span
                 className={`text-base font-medium flex-1 ${
                   !open && "hidden"
                 } duration-200`}
               >
+                <Link to="/">{menu.titleDas}</Link>
+                <Link to="/sale">{menu.titleSal}</Link>
                 <Link to="/">{menu.title}</Link>
-                <div onClick={() => setsubmenuOpenTwo(!submenuOpenTwo)}>
-                  {menu.title2}
-                </div>
+                <Link to="/addcategory">{menu.title2}</Link>
               </span>
 
               {menu.subMenu && open && (
                 <BsArrowRightShort
                   className={`text-2xl ${submenuOpen && "rotate-90"}`}
                   onClick={() => setsubmenuOpen(!submenuOpen)}
-                />
-              )}
-
-              {menu.subMenu2 && open && (
-                <BsArrowRightShort
-                  className={`text-2xl ${submenuOpenTwo && "rotate-90"}`}
-                  onClick={() => setsubmenuOpenTwo(!submenuOpenTwo)}
                 />
               )}
               {menu.subMenu3 && open && (
@@ -120,28 +109,6 @@ function Sidebar() {
                   >
                     <div className="text-xl ml-2 p-1">{submenuItem.icon}</div>
                     {submenuItem.title}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {menu.subMenu2 && submenuOpenTwo && open && (
-              <ul>
-                {menu.subMenuItemsTwo.map((submenuItemTwo, index) => (
-                  <li
-                    key={index}
-                    className="text-primary-text-dark text-md flex items-center gap-x-4 cursor-pointer p-2 hover:bg-primary-bg-light"
-                  >
-                    <div className="text-xl ml-2 p-1">
-                      {submenuItemTwo.icon}
-                    </div>
-                    <div>
-                    <Link to='/addcategory'>
-                    {submenuItemTwo.title1}
-                    </Link>
-                    <Link>
-                    {submenuItemTwo.title2}
-                    </Link>
-                    </div>
                   </li>
                 ))}
               </ul>
@@ -165,7 +132,7 @@ function Sidebar() {
         ))}
         <BsList
           color="white"
-          className="absolute top-0 right-3 md:right-5 text-primary-text-dark mt-4 text-3xl rounded cursor-pointer"
+          className="absolute top-0 right-4 text-primary-text-dark mt-4 text-3xl rounded cursor-pointer"
           onClick={() => setOpen(!open)}
         />
       </ul>

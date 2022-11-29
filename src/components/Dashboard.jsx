@@ -5,10 +5,10 @@ import { AiFillPlusSquare } from "react-icons/ai";
 function Dashboard() {
   return (
     <div className="flex-1">
-      <span className="flex uppercase text-md text-slate-900 lg:h-24 lg:mb-6 mb-4 tracking-wider h-16 items-center justify-center bg-secondary-bg-light shadow-sm m-2 rounded-sm">
+      <span className="flex ml-4 mr-4 uppercase text-md text-slate-900 lg:h-24 lg:mb-6 mb-4 tracking-wider h-16 items-center justify-center bg-secondary-bg-light shadow-sm m-2 rounded-sm">
         ស្វាគមន៏មកកាន់​​ P.S.S លក់គ្រឿងសំណង់
       </span>
-      <div className="grid grid-cols-4 gap-4 m-2">
+      <div className="grid grid-cols-4 gap-4 ml-4 mr-4">
         <div className="bg-secondary-bg-light h-20 flex justify-between col-span-4 md:col-span-2 shadow-sm rounded-sm overflow-hidden">
           <div className="flex p-2 mt-2 justify-between flex-col text-slate-600">
             <span className="text-2xl">200</span>

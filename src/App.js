@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Payments from "./components/Payments";
 import Role from "./components/Role";
 import AddCategory from "./components/categories/AddCategory";
+import Sale from "./components/sales/Sale";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <Routes>
         <Route element={<PrivateRoutes />}>
           <Route exact path="/" element={<Home />} />
-          <Route path="/payment" element={<Payments/>}/>
-          <Route path="/role" element={<Role/>} />
-          <Route path="/addcategory" element={<AddCategory/>} />
+          <Route path="/sale" element={<Sale />} />
+          <Route path="/payment" element={<Payments />} />
+          <Route path="/role" element={<Role />} />
+          <Route path="/addcategory" element={<AddCategory />} />
         </Route>
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/login" element={<Login />} />
